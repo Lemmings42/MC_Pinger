@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-
-client.login('ODIwMzI4NjEwNzE5MzM0NDUw.YEzkjQ.WPfoPQbZnWrBRKRfZIZ0b7zxPBU');//will change later
+require('dotenv').config();
+client.login(process.env.TOKEN);
 
 client.on('ready', ()=>console.log('auth complete'));
 client.on('message', msg=>{
